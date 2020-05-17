@@ -49,3 +49,22 @@ In the cdk directory, you can run: <br />
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Important links followed <br />
+1. profile creation <br />
+	-- aws secret key <br />
+	-- https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html <br />
+2. ecr docker image push <br />
+	-- after ecr creation go to ecr repo aws and get push command <br />
+	-- https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html <br />
+4. git token for ci/cd pipeline 65a45ed149bac7bcac4c66fb6ce0498e37446a02 <br />
+	-- https://github.com/settings/tokens <br />
+	-- https://docs.aws.amazon.com/codepipeline/latest/userguide/GitHub-create-personal-token-CLI.html <br />
+5. add git awss token to secret manager <br />
+	-- https://medium.com/@eoins/securing-github-tokens-in-a-serverless-codepipeline-dc3a24ddc356 <br />
+	-- https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html <br />
+6. manual step for setting up ecr, ecs, codepipeline <br />
+	-- https://dev.to/mubbashir10/containerize-react-app-with-docker-for-production-572b <br />
+7. cdk way for setting up infrastrcuture <br />
+	-- for container http://aws-msg-app.ws.kabits.com/v3-deploying-backend/ <br />
+	-- for git integration https://github.com/peerjako-aws/cdk-ecs-cicd/blob/master/cdk/lib/dev-pipeline-stack.ts
