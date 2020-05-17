@@ -9,7 +9,6 @@ import * as codebuild from '@aws-cdk/aws-codebuild';
 import * as codepipeline from '@aws-cdk/aws-codepipeline';
 import * as codepipeline_actions from '@aws-cdk/aws-codepipeline-actions';
 import { githubOwner, repoName, awsSecretsGitHubTokenName, gitDevBranch } from '../config'
-import {SecretValue} from "@aws-cdk/core";
 
 export class CdkStack extends cdk.Stack {
     constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -162,7 +161,7 @@ export class CdkStack extends cdk.Stack {
             actionName: 'GitHub',
             owner: githubOwner,
             repo: repoName,
-            oauthToken: new SecretValue(awsSecretsGitHubTokenName),
+            oauthToken: cdk.SecretValue.secretsManager(awsSecretsGitHubTokenName),
             output: sourceOutput,
             trigger: codepipeline_actions.GitHubTrigger.POLL,
             branch: gitDevBranch
