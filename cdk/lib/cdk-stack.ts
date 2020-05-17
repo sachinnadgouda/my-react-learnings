@@ -8,7 +8,8 @@ import * as elbv2 from '@aws-cdk/aws-elasticloadbalancingv2';
 import * as codebuild from '@aws-cdk/aws-codebuild';
 import * as codepipeline from '@aws-cdk/aws-codepipeline';
 import * as codepipeline_actions from '@aws-cdk/aws-codepipeline-actions';
-import { githubOwner, repoName, awsSecretsGitHubTokenName, gitDevBranch } from '../config'
+import { githubOwner, repoName, awsSecretsGitHubTokenName, gitDevBranch } from '../config';
+import * as sm from "@aws-cdk/aws-secretsmanager";
 
 export class CdkStack extends cdk.Stack {
     constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
